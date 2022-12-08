@@ -1,6 +1,6 @@
-# Curso-WEB - Light/Dark 
+# Curso-WEB - Center-DIV
 
-Projeto de desenvolvimento Light/Dark 
+Projeto de desenvolvimento Center-DIV
 
 Atividade curso Web
 
