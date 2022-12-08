@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;               
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  :root {
+    --cor-primaria: #151320;
+    --cor-sucesso: #00bf8e;
+    --cor-alerta: #f7c94b;
+    --cor-perigo: #f75842;
+    --cor-perigo-variante: rgba(247, 88, 66, 0.4);
+    --cor-branco: #fff;
+    --cor-branco-variante:#e1e1e1;
+    --cor-branco-variante-1:#e6e6e6;
+    --cor-clara: rgba(255, 255, 255, 0.7);
+    --cor-escura: #000;
+    --cor-escura-op: #000000af;   
+    --cor-escura-variante: #151d2a;
+    --cor-escura-variante-1: #151d2a;
+    --cor-escura-variante-2: #1c2739;    
+    --cor-bg: #1f2641;
+    --cor-bg1: #2e3267;
+    --cor-bg2: #424890;
+  
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+      
+  }
+  
+  body {
+    /* height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    background: var(--cor-bg);    
+    background-image: url(img/bg-texture.png);  
+  }
+
+.parent {
+    
+    height: 300px;
+    background: #09131B;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgb(0 0 0 / .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background: #ff652f;
+    border: dashed .8rem rgb(255 255 255 / .8);
+    border-radius: .5rem;
+  
+}
+
