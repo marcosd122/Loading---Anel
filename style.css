@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0;               
+    padding: 0;       
+    box-sizing: border-box;        
     user-select: none;
     font-family: "Montserrat", sans-serif;
   }
@@ -10,6 +11,9 @@
     --cor-sucesso: #00bf8e;
     --cor-alerta: #f7c94b;
     --cor-perigo: #f75842;
+    --cor-anel: #f13a8f;
+    --cor-anel-variante: #4bc8eb;
+    --cor-anel-variante-1: #36f372;
     --cor-perigo-variante: rgba(247, 88, 66, 0.4);
     --cor-branco: #fff;
     --cor-branco-variante:#e1e1e1;
@@ -31,32 +35,75 @@
   }
   
   body {
-    /* height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     background: var(--cor-bg);    
     background-image: url(img/bg-texture.png);  
   }
 
-.parent {
-    
-    height: 300px;
-    background: #09131B;
-    border-radius: .5rem;
-    box-shadow: 0 0 1rem rgb(0 0 0 / .2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.child {
+  .rings {
+    position: relative;
     width: 100px;
     height: 100px;
-    background: #ff652f;
-    border: dashed .8rem rgb(255 255 255 / .8);
-    border-radius: .5rem;
-  
+    padding:3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rings .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid var(--cor-anel);      
+  }
+
+  .rings .ring:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border: 7px solid var(--cor-anel);
+    animation: ring-1 1.5s linear infinite;
+  }
+
+  .rings .ring:nth-child(2) {
+    width: calc(100% * 0.65);
+    height: calc(100% * 0.65);
+    border: 4px solid var(--cor-anel-variante);
+    animation: ring-2 1.5s linear infinite;
+  }
+
+  .rings .ring:nth-child(3) {
+    width: calc(100% * 0.1);
+    height: calc(100% * 0.1);
+    border: 2px solid var(--cor-anel-variante-1);
+    animation: ring-3 1.5s linear infinite;
+  }
+
+@keyframes ring-1 {
+  0% {
+    transform: rotateZ(20deg);
+  }
+  100% {
+    transform: rotateZ(100deg) rotateY(360deg);
+  }
 }
 
+@keyframes ring-2 {
+  0% {
+    transform: rotateZ(100deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateX(360deg);
+  }
+}
+
+@keyframes ring-3 {
+  0% {
+    transform: rotateZ(100deg) rotateX(-360deg);
+  }
+  100% {
+    transform: rotateZ(-100deg) rotateX(360deg);
+  }
+}
+  

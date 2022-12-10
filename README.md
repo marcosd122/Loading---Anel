@@ -1,6 +1,6 @@
-# Curso-WEB - Center-DIV
+# Curso-WEB - Loading - Anel
 
-Projeto de desenvolvimento Center-DIV
+Projeto de desenvolvimento Loading - Anel
 
 Atividade curso Web
 
